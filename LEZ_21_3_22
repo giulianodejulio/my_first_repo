@@ -1,0 +1,11 @@
+Eseguo il comando cmake nella cartella dove sta CMakeLists.txt, e viene creata la cartella build, all'interno della quale eseguo make. A questo punto viene creata la cartella bin, che contiene i file eseguibili. Per eseguirne uno, in bin scrivo ../bin/hello_world.
+
+Ricordiamo che con gli array il nome dell'array è il puntatore costante all'indirizzo di memoria del 1° elemento dell'array stesso. Quindi possiamo fare
+
+int *p=0;
+int arr[]={1,2,3,4};
+p=arr;
+
+in questo modo assegnamo a p l'indirizzo del primo elemento di arr. Gli elementi successivi sono salvati in locazioni consecutive di memoria. Fare p++ restituisce l'indirizzo del prossimo elemento dell'array.
+
+In CMakeLists.txt abbiamo messo include_directories( code/lib/ ) in modo che quando faccio #include "lib.h" il compilatore sa dove andare a prendere la libreria.

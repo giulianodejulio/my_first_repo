@@ -1,0 +1,8 @@
+catkin_make va eseguita nella cartella ros_ws (il workspace) e fa la compilazione di tutto il workspace e , mentre in ros_ws/src faccio catkin_create_pkg.
+roscd da solo mi porta in ros_ws/devel
+roscd nome_pkg mi porta nel pacchetto.
+
+In generale le #include le faccio di librerie di roba di cui ho incluso le dipendenze all'atto della creazione del pacchetto
+ros::Publisher topic_pub = nh.advertise< std_msgs::Int32>("/number",0);
+0 significa una queue illimitata, se metto un numero >0 indica la lunghezza della coda dei messaggi.
+alla fine di un ciclo while(1) metto una sleep() altrimenti il ciclo si prende tutta la CPU.
